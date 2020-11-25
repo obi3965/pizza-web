@@ -1,0 +1,72 @@
+.footer {
+    
+    height: 45vh;
+    width: 100%;
+    background-image: url('/img/footer.jpg');
+}
+.footer .links ul {
+    list-style-type: none;
+}
+.footer .links li a {
+    color: white;
+    transition: color 0.2s;
+    opacity: .85;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 17px;
+}
+.footer .links li a:hover {
+    text-decoration: none;
+    color: #eac100;
+    transition: all ease-out .5s;
+}
+.footer .about-company i {
+    font-size: 25px;
+}
+.footer .about-company a  {
+    color: white;
+    transition: color 0.2s;
+    text-decoration: none;
+    font-size: 17px;
+}
+.footer .about-company a:hover {
+    background-color: transparent;
+    transition: all .3s ease-out ;
+    color: #eac100;
+}
+
+.footer .copyright p {
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    font-size: 17px;
+}
+.links h4, .location h4{
+    color: #eac100;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about-company h4{
+    color: #eac100;
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.about-company p, .location p{
+    color: #ffffff;
+    opacity: .85;
+    text-transform: capitalize;
+}
+
+/* .copyright p{
+color: #f44336;
+text-align: center !important;
+ padding-top: 20px;
+} */
+
+.copyright p{
+    color: #eac100;
+    text-align: center !important;
+     padding-top: 20px;
+    }

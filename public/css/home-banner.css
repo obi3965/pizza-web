@@ -1,0 +1,115 @@
+.banner{
+    background-image: url('https://cdn.shopify.com/s/files/1/0046/1615/9347/files/pizza1_ebec8242-ca1f-4f73-bfed-c8265b6a39b1_2000x.jpg?v=1534498646');
+    height: 100vh;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    position: relative;
+    object-fit: cover !important;
+    
+    
+}
+
+.checkout-banner{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+     url('/img/h-1.webp');
+    height: 550px ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    position: relative;
+    
+}
+
+
+
+
+
+.banner-1-items{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.banner-1-items h3{
+    color: #fff;
+    opacity: .90;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 30px;
+}
+.banner-1-desc p{
+    color: #fff;
+    opacity: .80;
+    margin-top: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 17px;
+}
+.banner-box{
+    position: absolute;
+    top: 45%;
+    left: 12%;
+    transform: translateY(-45%,-12%);
+    width: 60%;
+}
+.checkout-banner-box{
+  position: absolute;
+    top: 35%;
+    left: 12%;
+    transform: translateY(-35%,-12%);
+    width: 60%;
+}
+.banner-box h2, .checkout-banner-box h2{
+    color: rgb(215, 35, 35);
+    text-transform: capitalize;
+  font-weight: 400;
+  font-size: 45px;
+  letter-spacing: 1px;
+  font-family: 'Wendy One', sans-serif;
+}
+.banner-box h1, .checkout-banner-box h1{
+  color: #eac100;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: 1px;
+  font-family: 'Wendy One', sans-serif;
+}
+
+.banner-box h3, .checkout-banner-box h3{
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-family: 'Wendy One', sans-serif;
+}
+.banner-box h4, .checkout-banner-box h4{
+  color: #d72323;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-family: 'Wendy One', sans-serif;
+}
+.btn-danger{
+  background-color: transparent !important;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #eac100;
+ color: #fff;
+ font-weight: 600;
+ font-size: 18px;
+ border-radius: 25px;
+ margin-top: 12px;
+}
+.btn-danger:hover{
+  border: 1px solid #eac100;
+  background-color: #eac100!important;
+  transition: all ease-out .5s;
+  opacity: .85s;
+}

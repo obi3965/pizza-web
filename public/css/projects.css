@@ -1,0 +1,52 @@
+.project-banner{
+    background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),
+     url('https://images.pexels.com/photos/3944315/pexels-photo-3944315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    height: 80vh;
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.project-banner-box{
+position: absolute;
+  top: 35%;
+  left: 12%;
+  transform: translateY(-35%,-12%);
+  width: 60%;
+}
+.project-banner-box h2{
+  color: rgb(215, 35, 35);
+  text-transform: capitalize;
+font-weight: 400;
+font-size: 45px;
+letter-spacing: 1px;
+font-family: 'Wendy One', sans-serif;
+}
+ .project-banner-box h1{
+color: #eac100;
+text-transform: capitalize;
+font-weight: 400;
+font-size: 50px;
+letter-spacing: 1px;
+font-family: 'Wendy One', sans-serif;
+}
+
+ .project-banner-box h3{
+color: #fff;
+text-transform: capitalize;
+font-weight: 400;
+font-size: 35px;
+letter-spacing: 1px;
+font-family: 'Wendy One', sans-serif;
+}
+ .project-banner-box h4{
+color: #d72323;
+text-transform: capitalize;
+font-weight: 400;
+font-size: 35px;
+letter-spacing: 1px;
+font-family: 'Wendy One', sans-serif;
+}

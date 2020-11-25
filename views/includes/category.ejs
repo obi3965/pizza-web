@@ -1,0 +1,37 @@
+
+
+
+
+
+<div class="container">
+  <div class="cat-title">
+    <h1>Popular Collection</h1>
+    <div class="underline-3"></div>
+    <p>Enjoy our different types of recipes including all kind of burgers, pizzas and also soft drinks.</p>
+  </div>
+  
+  <div class="row m-auto">
+    <% cats.forEach(function(c){ %> 
+     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 box" >
+       <div class="container_foto">
+      <div class="ver_mas text-center">
+        <span class="lnr lnr-eye">
+          <a href="/flavours/<%= c.slug %>"> view all </a>
+        </span>
+     </div>
+        <article class="text-left">
+           <h2><%= c.title %></h2>
+           <h4><%= c.text %></h4>
+        </article>
+        <img src="<%= c.catImage %>" alt="">
+      </div>
+    </div>
+    <%}) %>
+
+     
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('includes/styles.ejs') %>
+</head>
+<body>
+    <%- include('includes/nav.ejs') %>
+    <%- include('includes/projects-banner.ejs') %>
+    <div class="container">
+        <div class="row">
+            <% allPizzas.forEach(function(allPizza) {%> 
+            <div class="col-md-3 col-sm-6">
+                <div class="product-grid">
+                    <div class="product-image">
+                        <a href="#">
+                            <img class="pic-1" src="<%= allPizza.image %>">
+                           
+                        </a>
+                        <ul class="social">
+                            <li><a href="" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
+                            <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                            <!-- <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li> -->
+                        </ul>
+                        <span class="product-new-label"><%= allPizza.sale %></span>
+                        <span class="product-discount-label"><%= allPizza.discount %>%</span>
+                    </div>
+                    <ul class="rating">
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star"></li>
+                        <li class="fa fa-star disable"></li>
+                    </ul>
+                    <div class="product-content">
+                        <h3 class="title"><a href="#"><%= allPizza.title %></a></h3>
+                        <div class="price"><%= parseFloat(allPizza.price).toFixed(2) %>
+                            <span><%= allPizza.deletedPrice %></span>
+                        </div>
+                        <a class="add-to-cart" href="/flavours/<%= allPizza.category %>/<%= allPizza.slug %>">view detail</a>
+                    </div>
+                </div>
+            </div>
+            <%})%>
+        </div>
+    </div>
+    <%- include('includes/icon.ejs') %>
+    <%- include('includes/footer.ejs') %>
+    <%- include('includes/js.ejs') %>
+</body>
+</html>

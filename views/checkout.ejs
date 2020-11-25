@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('includes/styles.ejs') %>
+    
+</head>
+<body>
+<%- include('includes/nav.ejs') %>
+<%- include('includes/checkout-banner.ejs') %>
+
+
+
+
+
+<div class="cart ">
+<% if (typeof cart !== "undefined") { %>
+    <h1 class="page-title">My Cart</h1>
+    <br><br>
+    <table class="table table-striped alignmiddle ">
+        
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th></th>
+            <th>Subtotal</th>
+        </tr>
+        
+        <% var total = 0; %>
+        <% cart.forEach(function(pizza){ %>
+        <% var sub = parseFloat(pizza.qty * pizza.price).toFixed(2) %>
+        <% total += +sub %>
+        <tr>
+            <td><img class="cpi" src="<%= pizza.image %>" alt=""></td>
+            <td><%= pizza.title %></td>
+            <td>$<%= pizza.price %></td>
+            <td><%= pizza.qty %></td>
+            <td>
+                <a class="btn btn-success" href="/cart/update/<%= pizza.title %>?action=add">+</a>&nbsp;
+                <a class="btn btn-primary" href="/cart/update/<%= pizza.title %>?action=remove">-</a>&nbsp;
+                <a class="clear btn btn-default" href="/cart/update/<%= pizza.title %>?action=clear">Clear</a>&nbsp;
+            </td>
+            <td>$<%= sub %></td>
+        </tr>
+        <% }); %>
+        <tr>
+            <td colspan="6" align="right"><b>Total: </b> $<%= parseFloat(total).toFixed(2) %></td>
+        </tr>
+        <tr>
+            <td colspan="5" align="right">
+                <a class="clearCart btn btn-outline" href="/cart/clear">Clear cart</a>
+            </td>
+            <td colspan="5" align="right">
+                <a class="btn btn-primary buynow" href="#">Buy now</a>
+            </td>
+        </tr>
+        
+    </table>
+    <form class="pp" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="upload" value="1">
+    <input type="hidden" name="business" value="obi.3965@gmail.com">
+    <% var num = 0; %>
+    <% cart.forEach(function(pizza){ %>
+        <% num++ %>
+        <input type="hidden" name="item_name_<%= num %>" value="<%= pizza.title %>">
+        <input type="hidden" name="amount_<%= num %>" value="<%= pizza.price %>">
+        <input type="hidden" name="quantity_<%= num %>" value="<%= pizza.qty %>">
+    <% }); %>
+    <input type="hidden" name="currency_code" value="KR">
+    <input type="hidden" name="amount" value="<%= total %>">
+    <input class="input" type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+    </form>
+    <% } else {%>
+    <h3 class="text-center">Your cart is empty. 🙂 </h3>
+    <% } %>
+    
+</div>
+
+    
+    <%- include('includes/footer.ejs') %>
+    <%- include('includes/js.ejs') %>
+</body>
+</html>

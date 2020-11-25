@@ -1,0 +1,92 @@
+ .service-title h1{
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-family: 'Wendy One', sans-serif;
+  text-align: center;
+} 
+.service{
+    background-color: #f7f7f7;
+    padding: 55px;
+}
+.underline-1{
+    border-bottom: 3px solid #eac100;
+    margin: 10px auto;
+    width: 15%;
+}
+.service-image img{
+    width: 400px;
+    height: auto;
+}
+
+.service-image{
+     height: 400px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.services-1-items{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.service-icons{
+    width: 400px;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+  
+}
+.service-icons img{
+   
+   
+    
+}
+.img{
+    background-color: transparent;
+  padding: 15px;  
+  border: 2px solid #000;
+  border-radius: 50%;   
+}
+.img:hover{
+  background-color:  #eac100;
+  transition: ease  all .5s;
+  border: 2px solid #eac100;
+  cursor: pointer;
+}
+.service-desc{
+    width: 70%;
+    margin: 10px auto;
+    text-align: justify;
+    word-break: keep-all;
+}
+.box-1 h4{
+    text-transform: capitalize;
+    color: #d72323;
+}
+.service-btn{
+    margin: 40px auto;
+}
+.service-btn a{
+    width: 200px; 
+    border: 2px solid #eac100;
+    padding: 10px 40px;
+    color: #000;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-decoration: none;
+    background-color: #eac100;
+    transition: ease  all .5s;
+}
+.service-btn a:hover,
+.service-btn a:focus{
+    transition: ease  all .5s;
+    box-shadow: inset 0 0 0 2em #eac100;
+    border-radius: 25px;
+    border: 2px solid #eac100;
+}
