@@ -8,7 +8,14 @@
 </head>
 <body>
     <%- include('includes/nav.ejs') %>
-    <%- include('includes/projects-banner.ejs') %>
+    <%- include('includes/flavours-banner.ejs') %>
+
+    <div class="container">
+        <div class="pizza-title">
+            <h1>our menu</h1>
+            <div class="underline-pizza"></div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <% allPizzas.forEach(function(allPizza) {%> 
@@ -46,7 +53,10 @@
             <%})%>
         </div>
     </div>
-    <%- include('includes/icon.ejs') %>
+    <div class="cat-image">
+       <%- include('includes/slider.ejs') %> 
+    </div>
+    
     <%- include('includes/footer.ejs') %>
     <%- include('includes/js.ejs') %>
 </body>

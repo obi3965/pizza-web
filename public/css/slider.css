@@ -67,7 +67,45 @@
 	color: #fff;
 }
 .underline-4{
-  width: 6%;
+  width: 10%;
   border-bottom: 3px solid #eac100;
   margin:  auto;
+}
+
+@media(min-width:320px) and (max-width:480px){
+  .client h1{
+    font-size: 24px;
+  }
+  .underline-4{
+    width: 20%;
+  }
+  .slider{
+    margin-top: -40px;
+    height: 200px;
+  }
+}
+
+@media(min-width:767px) and (max-width:1023px){
+  .client h1{
+    font-size: 25px;
+    
+  }
+  .underline-4{
+    width: 20%;
+  }
+  .slider{
+    margin-top: -40px;
+    height: 300px;
+  }
+}
+
+@media(min-width:1024px) and (max-width:1366px){
+ 
+  .underline-4{
+    width: 15%;
+  }
+  .slider{
+    margin-top: -40px;
+    height: 300px;
+  }
 }

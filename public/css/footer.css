@@ -1,5 +1,7 @@
 .footer {
-    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 45vh;
     width: 100%;
     background-image: url('/img/footer.jpg');
@@ -59,14 +61,43 @@
     text-transform: capitalize;
 }
 
-/* .copyright p{
-color: #f44336;
-text-align: center !important;
- padding-top: 20px;
-} */
+
 
 .copyright p{
     color: #eac100;
     text-align: center !important;
      padding-top: 20px;
+    }
+
+    @media(min-width:320px) and (max-width:480px){
+        .footer{
+            height: auto;
+        }
+        .links ul li a{
+            font-size: 12px;
+            margin-top: -3px;
+        }
+        .links h4, .location h4{
+           margin-top: 10px;
+            font-size: 20px;
+            
+        }
+        .about-company h4{
+            color: #eac100;
+            text-transform: uppercase;
+            font-size: 20px;
+            
+        }
+    }
+
+    @media(min-width:767px) and (max-width:1023px){
+        .footer{
+            height: auto;
+        }
+    }
+
+    @media(min-width:1024px) and (max-width:1366px){
+        .footer{
+            height: auto;
+        }
     }

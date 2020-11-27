@@ -28,27 +28,21 @@
     text-shadow: 0 3px 0 rgba(0,0,0, 0.5);
 }
 .contact-banner-box h2{
-    text-transform: capitalize;
-    color: #ffffff;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    font-size: 55px;
-    opacity: 1;
-    text-shadow: 0 3px 0 rgba(0,0,0, 0.5);
+  color: #d72323;
+  text-transform: capitalize;
+  font-weight: 900;
+  font-size: 35px;
+  letter-spacing: 1px;
+  font-family: 'Wendy One', sans-serif;
 }
-.contact-banner-box h1{
-    text-transform: capitalize;
-    color: #f44336;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    font-size: 55px;
-    opacity: 1;
-    text-shadow: 0 3px 0 rgba(0,0,0, 0.5);
-}
+
 .contact-banner-box p{
-    color: #ffffff;
-    font-size: 28px;
-    opacity: .85;
+  color: #eac100;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: 'Wendy One', sans-serif;
 }
 
 a:hover {
@@ -122,4 +116,21 @@ a:hover {
     height: 100vh;
     justify-content: center;
     align-items: center;
+  }
+
+  @media(min-width:320px) and (max-width:480px){
+     .contact-banner{
+      height: 80vh;
+      background-position: center;
+    }
+    
+     .contact-banner-box{
+      width: 90%;
+      top: 38%;
+      left: 4%;
+    }
+     .contact-banner-box h2{  
+    
+    font-size: 25px;
+    }
   }

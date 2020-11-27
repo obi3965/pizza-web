@@ -3,9 +3,8 @@
     height: 100vh;
     background-position:center;
     background-repeat: no-repeat;
-    background-size: cover !important;
     position: relative;
-    object-fit: cover !important;
+    width: 100%;
     
     
 }
@@ -18,7 +17,7 @@
     background-repeat: no-repeat;
     background-size: cover !important;
     position: relative;
-    
+   
 }
 
 
@@ -112,4 +111,94 @@
   background-color: #eac100!important;
   transition: all ease-out .5s;
   opacity: .85s;
+}
+
+@media(min-width:320px) and (max-width:480px){
+  .banner{
+    height: 80vh;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+     url('https://cdn.shopify.com/s/files/1/0046/1615/9347/files/pizza1_ebec8242-ca1f-4f73-bfed-c8265b6a39b1_2000x.jpg?v=1534498646');
+    background-position:right 35% center;
+  }
+  
+  .banner-box{
+    width: 90%;
+    top: 38%;
+    left: 4%;
+  }
+  .banner-box h1, .banner-box h2, 
+  .banner-box h3, .banner-box h4{
+  font-size: 25px;
+  }
+  .btn-danger{
+   font-size: 15px;
+    width: 150px;
+    padding: 8px;
+   
+   font-weight: 500;
+   
+  }
+}
+
+@media(min-width:767px) and (max-width:1023px){
+  .banner{
+    background-position:right 35% center;
+    background-color: #eac100;
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+     url('https://cdn.shopify.com/s/files/1/0046/1615/9347/files/pizza1_ebec8242-ca1f-4f73-bfed-c8265b6a39b1_2000x.jpg?v=1534498646');
+  }
+  .banner-box{
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    width: 70%;
+   
+}
+.banner-box h1, .banner-box h2, 
+  .banner-box h3, .banner-box h4{
+  font-size: 35px;
+  }
+  .btn-danger{
+   font-size: 19px;
+    width: 200px;
+    padding: 11px;
+   
+   font-weight: 500;
+   
+  }
+}
+
+@media(min-width:1024px) and (max-width:1365px){
+  .banner{
+    background-position:right 35% center;
+    background-color: #eac100;
+    height: 55vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://cdn.shopify.com/s/files/1/0046/1615/9347/files/pizza1_ebec8242-ca1f-4f73-bfed-c8265b6a39b1_2000x.jpg?v=1534498646');
+  }
+  .banner-box{
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    width: 70%;
+}
+.banner-box h1, .banner-box h2, 
+  .banner-box h3, .banner-box h4{
+  font-size: 42px;
+  }
+  .btn-danger{
+   font-size: 20px;
+    width: 220px;
+    padding: 14px;
+   border-radius: 35px;
+   font-weight: 600;
+   
+  }
 }

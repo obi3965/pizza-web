@@ -50,3 +50,111 @@ font-size: 35px;
 letter-spacing: 1px;
 font-family: 'Wendy One', sans-serif;
 }
+
+.pizza-title h1{
+  color: #000;
+text-transform: capitalize;
+font-weight: 400;
+font-size: 40px;
+letter-spacing: 1px;
+font-family: 'Wendy One', sans-serif;
+text-align: center !important;
+margin-top: 20px;
+}
+.underline-pizza{
+  border-bottom: 3px solid #eac100;
+  width: 10%;
+  margin: 6px auto;
+}
+@media(min-width:320px) and (max-width:480px){
+  .project-banner{
+    height: 80vh;
+    background-position: center;
+  }
+  
+  .project-banner-box{
+    width: 90%;
+    top: 38%;
+    left: 4%;
+  }
+  .project-banner-box h1, .project-banner-box h2, 
+  .project-banner-box h3, .project-banner-box h4{
+  font-size: 25px;
+  }
+}
+
+@media(min-width:767px) and (max-width:1023px){
+  .project-banner{
+    background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),
+     url('https://images.pexels.com/photos/3944315/pexels-photo-3944315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    height: 60vh;
+    
+}
+
+
+.project-banner-box{
+position: absolute;
+  top: 42%;
+  left: 4%;
+  transform: translateY(-40%,-4%);
+  width: 70%;
+}
+.project-banner-box h2{
+font-size: 30px;
+
+}
+ .project-banner-box h1{
+
+font-size: 30px;
+
+}
+
+ .project-banner-box h3{
+color: #fff;
+text-transform: capitalize;
+font-weight: 400;
+ font-size: 30px;
+}
+ .project-banner-box h4{
+ font-size: 25px;
+
+}
+}
+
+@media(min-width:1024px) and (max-width:1366px){
+  .project-banner{
+    background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),
+     url('https://images.pexels.com/photos/3944315/pexels-photo-3944315.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    height: 55vh;
+    
+}
+
+
+.project-banner-box{
+position: absolute;
+  top: 42%;
+  left: 4%;
+  transform: translateY(-40%,-4%);
+  width: 80%;
+}
+.project-banner-box h2{
+font-size: 35px;
+
+}
+ .project-banner-box h1{
+
+font-size: 35px;
+
+}
+
+ .project-banner-box h3{
+color: #fff;
+text-transform: capitalize;
+font-weight: 400;
+ font-size: 35px;
+}
+ .project-banner-box h4{
+ font-size: 30px;
+
+}
+}
