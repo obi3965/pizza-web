@@ -72,7 +72,7 @@
   margin:  auto;
 }
 
-@media(min-width:320px) and (max-width:480px){
+@media(min-width:320px) and (max-width:767px){
   .client h1{
     font-size: 24px;
   }
@@ -84,6 +84,26 @@
     height: 200px;
   }
 }
+
+
+/*galaxy fold*/
+@media(min-width:280px) and (max-width:319px){
+  .slider{
+    height: 180px;
+    margin-top: -8px;
+  }
+  .client{
+    margin-bottom: -10px;
+    height: 60px;
+  }
+  .client h1{
+    font-size: 25px;
+  }
+  .underline-4{
+    width: 18%;
+  }
+}
+
 
 @media(min-width:767px) and (max-width:1023px){
   .client h1{

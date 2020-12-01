@@ -171,7 +171,7 @@ margin: 10px 0px;
 }
 
 
-@media(min-width:320px) and (max-width:480px){
+@media(min-width:320px) and (max-width:767px){
 	.cat-title h1{
 		font-size: 23px;
 	}
@@ -199,6 +199,38 @@ margin: 10px 0px;
 		letter-spacing: 1px;
 	}
 }
+
+/*galaxy fold*/
+@media(min-width:280px) and (max-width:319px){
+	.cat-title h1{
+		font-size: 23px;
+	}
+	.cat-title{
+		width: 100%;
+	}
+	.cat-title p{
+		color: #fff;
+		font-size: 14px;
+		
+	}
+	.underline-3{
+		width: 35%;
+	}
+	.container_foto{
+		max-height: 210px;
+	}
+	.container_foto h2{
+		font-size: 24px;
+		letter-spacing: 1px;
+		text-transform: capitalize;
+
+	}
+	.container_foto h4{
+		font-size: 17px;
+		letter-spacing: 1px;
+	}
+}
+
 
 @media(min-width:767px) and (max-width:1023px){
 	.container_foto{

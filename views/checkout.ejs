@@ -12,74 +12,69 @@
 <%- include('includes/checkout-banner.ejs') %>
 
 
+            <div class="section mb-3">
+           <div class="container-fluid">
 
+               <div class="row d-flex align-items-flex-start">
+                <% if (typeof cart !== "undefined") { %>
+                    <% var total = 0; %>
+                    <% cart.forEach(function(pizza){ %>
+                    <% var sub = parseFloat(pizza.qty * pizza.price).toFixed(2) %>
+                    <% total += +sub %>
+                   <div class="col-12 col-xs-12 ">
+                      <div class="checkout-1">
+                           <div class="checkout-image">
+                               <img src="<%= pizza.image %>" alt="">
+                               
+                            </div>
+                           <div class="checkout-image">
+                               <h3>title</h3>
+                               <p><%= pizza.title %></p>
+                        </div>
+                           <div class="checkout-image">
+                               <h3>price</h3>
+                               <p><%= pizza.price %></p>
+                            </div>
+                           <div class="checkout-image">
+                               <h3>quantity</h3>
+                                <p><%= pizza.qty %></p>
+                        </div>
+                       
+                           <div class="checkout-btn">
+                               <a href="/cart/update/<%= pizza.title %>?action=add" class="btn btn-primary btn-sm">+</a>
+                               <a href="/cart/update/<%= pizza.title %>?action=remove" class="btn btn-success btn-sm">-</a>
+                               <a href="/cart/update/<%= pizza.title %>?action=clear" class="btn btn-info btn-sm">remove</a>
+                           </div>
+                          
+                           <div class="sub">
+                            <h3>subtotal</h3>
+                         <p><%= sub %> kr</p>
+                     </div>
+                      </div>
+                   </div>
+                   <% }); %>
 
-
-<div class="cart ">
-<% if (typeof cart !== "undefined") { %>
-    <h1 class="page-title">My Cart</h1>
-    <br><br>
-    <table class="table table-striped alignmiddle ">
-        
-        <tr>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th></th>
-            <th>Subtotal</th>
-        </tr>
-        
-        <% var total = 0; %>
-        <% cart.forEach(function(pizza){ %>
-        <% var sub = parseFloat(pizza.qty * pizza.price).toFixed(2) %>
-        <% total += +sub %>
-        <tr>
-            <td><img class="cpi" src="<%= pizza.image %>" alt=""></td>
-            <td><%= pizza.title %></td>
-            <td>$<%= pizza.price %></td>
-            <td><%= pizza.qty %></td>
-            <td>
-                <a class="btn btn-success" href="/cart/update/<%= pizza.title %>?action=add">+</a>&nbsp;
-                <a class="btn btn-primary" href="/cart/update/<%= pizza.title %>?action=remove">-</a>&nbsp;
-                <a class="clear btn btn-default" href="/cart/update/<%= pizza.title %>?action=clear">Clear</a>&nbsp;
-            </td>
-            <td>$<%= sub %></td>
-        </tr>
-        <% }); %>
-        <tr>
-            <td colspan="6" align="right"><b>Total: </b> $<%= parseFloat(total).toFixed(2) %></td>
-        </tr>
-        <tr>
-            <td colspan="5" align="right">
-                <a class="clearCart btn btn-outline" href="/cart/clear">Clear cart</a>
-            </td>
-            <td colspan="5" align="right">
-                <a class="btn btn-primary buynow" href="#">Buy now</a>
-            </td>
-        </tr>
-        
-    </table>
-    <form class="pp" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
-    <input type="hidden" name="cmd" value="_cart">
-    <input type="hidden" name="upload" value="1">
-    <input type="hidden" name="business" value="obi.3965@gmail.com">
-    <% var num = 0; %>
-    <% cart.forEach(function(pizza){ %>
-        <% num++ %>
-        <input type="hidden" name="item_name_<%= num %>" value="<%= pizza.title %>">
-        <input type="hidden" name="amount_<%= num %>" value="<%= pizza.price %>">
-        <input type="hidden" name="quantity_<%= num %>" value="<%= pizza.qty %>">
-    <% }); %>
-    <input type="hidden" name="currency_code" value="KR">
-    <input type="hidden" name="amount" value="<%= total %>">
-    <input class="input" type="image" src="http://www.paypal.com/en_US/i/btn/x-click-but01.gif" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
-    </form>
-    <% } else {%>
-    <h3 class="text-center">Your cart is empty. 🙂 </h3>
-    <% } %>
-    
-</div>
+                   <div class="col-12 col-xs-12">
+                    <div class="checkout-2">
+                       
+                        <div class="total">
+                            <h2>total</h2>
+                            <span class="text-right"><%= parseFloat(total).toFixed(2) %> kr</span>
+                        </div>
+                        <hr>
+                        <div class="clear">
+                            <a id="clear" href="/cart/clear" class="btn-clear">clear cart</a>
+                            <a id="buy" href="" class="btn-buy">buy now</a>
+                        </div>
+                    </div>
+                 </div>
+                 <% } else {%>
+                    <h3 class="text-center">Your cart is empty. 🙂 </h3>
+                    <% } %> 
+               </div>
+           </div>
+        </div>
+           
 
     
     <%- include('includes/footer.ejs') %>

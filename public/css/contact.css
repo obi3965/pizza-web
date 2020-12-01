@@ -1,7 +1,14 @@
-
+.cat-image{
+  background-image: url('/img/overlay-1.jpg');
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .wrapper{
   margin-top: 97px;
 }
+
 .wrapper h2{
   text-transform: capitalize;
   font-weight: 400;
@@ -212,4 +219,77 @@
   
   word-wrap: keep-all;
  
+}
+
+
+
+
+/*galaxy fold*/
+@media(min-width:280px) and (max-width:319px){
+  .wrapper{
+      margin-top: 20px;
+  }
+  .wrapper h2{
+    font-size: 25px;
+  
+  }
+  .underline4{
+    width: 26%;
+  }
+  .cat-image{
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+    height: auto;
+    
+  }
+  .wrapper .btn input[type="submit"]{
+    margin: auto;
+    padding: 10px 20px;
+    width: 160px;
+    margin-left: 28px;
+    font-size: 16px !important;
+    font-weight: 500;
+  }
+  .items2 h3{
+    font-size: 20px;
+    text-align: center !important;
+  }
+  .items2{
+    width:90%;
+    
+  }
+  .items2 p{
+    text-align: center !important;
+  }
+}
+
+@media(min-width:320px) and (max-width:767px){
+  .wrapper{
+    margin-top: 20px;
+}
+.wrapper h2{
+  font-size: 25px;
+
+}
+.wrapper .btn input[type="submit"]{
+ 
+  padding: 10px 20px;
+  width: 160px;
+  margin-left: 68px;
+  font-size: 16px !important;
+  font-weight: 500;
+}
+.items2 h3{
+  font-size: 20px;
+  text-align: center !important;
+}
+.items2{
+  /* width:100%; */
+  margin-left: 5px;
+}
+.items2 p{
+  text-align: center !important;
+  margin-left: 25px;
+}
 }

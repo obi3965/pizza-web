@@ -226,6 +226,13 @@
     }
 }
 
+/*galaxy fold*/
+@media(min-width:280px) and (max-width:319px){
+
+}
+
+
+
 .product-box{
     margin: 30px auto;
     width: 70%;

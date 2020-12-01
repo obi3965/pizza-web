@@ -81,7 +81,7 @@
     border: 2px solid #eac100;
 }
 
-@media(min-width:320px) and (max-width:480px){
+@media(min-width:320px) and (max-width:767px){
     .service-title{
         
         width: 100%;
@@ -127,6 +127,70 @@
        width: 100%;
    }
 }
+/*galaxy fold*/
+@media(min-width:280px) and (max-width:319px){
+    .service-title{
+         width: 100%;
+        
+    }
+    .service-title h1{
+        font-size: 18px !important;
+        margin-top: 10px;
+        text-align: center;
+       
+      } 
+     
+      .underline-1{
+          
+          width: 25%;
+      }
+    .img img{
+        width: 30px;
+    }
+    .img{
+    
+      padding: 8px;  
+         
+    }
+    .service-image img{
+        width: 150px;
+        height: auto;
+        margin-top: -15px;
+    }
+    .service-icons{
+        width: 100%;
+        height: 120px;
+       
+        
+       
+    }
+    .img{
+        margin-left: 7px;
+    }
+    .service-image{
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+   .service-desc{
+       width: 100%;
+       margin-left: -28px;
+   }
+   .service-desc p{
+       width: 200px;
+       font-size: 15px;
+       
+   }
+   .underline-1{
+       width: 35%;
+   }
+   .service-btn a{
+       width: 150px;
+       padding: 8px 18px;
+   }
+}
+
 
 @media(min-width:767px) and (max-width:1023px){
     .img img{

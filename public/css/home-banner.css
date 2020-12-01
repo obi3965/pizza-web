@@ -113,7 +113,7 @@
   opacity: .85s;
 }
 
-@media(min-width:320px) and (max-width:480px){
+@media(min-width:320px) and (max-width:767px){
   .banner{
     height: 80vh;
     background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
@@ -137,6 +137,58 @@
    
    font-weight: 500;
    
+  }
+  .checkout-banner{
+    height: 60vh;
+  }
+  .checkout-banner-box{
+    top: 30%;
+    left: 4%;
+    width: 85%;
+  }
+  .checkout-banner-box h1, .checkout-banner-box h2, 
+  .checkout-banner-box h3, .checkout-banner-box h4{
+  font-size: 20px;
+  }
+}
+
+/*galaxy fold*/
+@media(min-width:280px) and (max-width:319px){
+  .banner{
+    height: 65vh;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+     url('https://cdn.shopify.com/s/files/1/0046/1615/9347/files/pizza1_ebec8242-ca1f-4f73-bfed-c8265b6a39b1_2000x.jpg?v=1534498646');
+    background-position:right 35% center;
+  }
+  
+  .banner-box{
+    width: 90%;
+    top: 38%;
+    left: 4%;
+  }
+  .banner-box h1, .banner-box h2, 
+  .banner-box h3, .banner-box h4{
+  font-size: 20px;
+  }
+  .btn-danger{
+   font-size: 14px !important;
+    width: 140px !important;
+    padding: 6px;
+   
+   font-weight: 500;
+   
+  }
+  .checkout-banner{
+    height: 60vh;
+  }
+  .checkout-banner-box{
+    top: 30%;
+    left: 4%;
+    width: 85%;
+  }
+  .checkout-banner-box h1, .checkout-banner-box h2, 
+  .checkout-banner-box h3, .checkout-banner-box h4{
+  font-size: 20px;
   }
 }
 
@@ -170,6 +222,18 @@
    font-weight: 500;
    
   }
+  .checkout-banner{
+    height: 55vh;
+  }
+  .checkout-banner-box{
+    top: 38%;
+    left: 4%;
+    width: 85%;
+  }
+  .checkout-banner-box h1, .checkout-banner-box h2, 
+  .checkout-banner-box h3, .checkout-banner-box h4{
+  font-size: 30px;
+  }
 }
 
 @media(min-width:1024px) and (max-width:1365px){
@@ -200,5 +264,18 @@
    border-radius: 35px;
    font-weight: 600;
    
+  }
+
+  .checkout-banner{
+    height: 50vh;
+  }
+  .checkout-banner-box{
+    top: 38%;
+    left: 4%;
+    width: 85%;
+  }
+  .checkout-banner-box h1, .checkout-banner-box h2, 
+  .checkout-banner-box h3, .checkout-banner-box h4{
+  font-size: 35px;
   }
 }
