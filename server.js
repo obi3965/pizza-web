@@ -18,13 +18,13 @@ const indexRoute = require('./routes/index')
 const category = require('./routes/category')
 const project = require('./routes/projects')
 const cart = require('./routes/cart')
-// Set global errors variable
+
 app.locals.errors = null;
 
-// Get Category Model
+
 const Category = require('./models/category');
 
-// Get all categories to pass to header.ejs
+
 Category.find(function (err, cats) {
     if (err) {
         console.log(err);
@@ -34,7 +34,7 @@ Category.find(function (err, cats) {
 });
 
 
-// middleware -
+
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -43,7 +43,7 @@ app.use(cors())
 app.use(flash());
 
 
-mongoose.connect(process.env.DB,{
+mongoose.connect(process.env.DB_URL,{
     useNewUrlParser:true,
   useUnifiedTopology:true,
   useCreateIndex:true,
@@ -72,13 +72,13 @@ mongoose.connect(process.env.DB,{
 
 app.get('*', function(req,res,next) {
     res.locals.cart = req.session.cart;
-    // res.locals.user = req.user || null;
+    
     next();
  });
 
 app.set("view engine", "ejs");
 app.set("views", "views");
-//app.use(express.static("public"));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -92,7 +92,7 @@ app.use('/cart', cart)
 
 
  
-const port = process.env.PORT || 8000;
+const port = process.env.PORT;
 app.listen(port, function(){
     console.log(
          `http://localhost:${port}`
