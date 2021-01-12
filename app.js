@@ -45,9 +45,9 @@ app.use(flash());
 
 mongoose.connect(process.env.DB,{
     useNewUrlParser:true,
-    useUnifiedTopology:true,
-    useCreateIndex:true,
-    useFindAndModify:false
+  useUnifiedTopology:true,
+  useCreateIndex:true,
+  useFindAndModify:false
      
   }).then(() =>{
       
@@ -92,7 +92,7 @@ app.use('/cart', cart)
 
 
  
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 8000;
 app.listen(port, function(){
     console.log(
          `http://localhost:${port}`
