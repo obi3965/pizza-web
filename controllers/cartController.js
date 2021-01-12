@@ -38,10 +38,10 @@ exports.addProduct = function (req,res) {
             }
         }
         console.log(req.session.cart)
-        //req.flash('success', 'product added')
+        
         res.redirect('back')
     });
-    //  res.send('cart')
+   
 
 };
 
@@ -91,7 +91,7 @@ exports.updateCart = function (req,res){
         }
     }
 
-    //req.flash('success', 'Cart updated!');
+    
     res.redirect('/cart/checkout');
 
 }
@@ -99,6 +99,6 @@ exports.updateCart = function (req,res){
 exports.clearCart = function (req,res){
     delete req.session.cart;
     
-    //req.flash('success', 'Cart cleared!');
+    
     res.redirect('/cart/checkout');
 }

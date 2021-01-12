@@ -31,31 +31,3 @@ exports.all = (req,res) =>{
 
 
   
-
-
-exports.gallary = (req,res) =>{
-    Product.find(function(err, gallaries){
-        if(err)
-        console.log(err)
-        res.render('gallary',{
-        title:'Gallary',
-        page:'gallary',
-        gallaries:gallaries  
-    }) 
-    })
-   
-}
-
-exports.resume = (req,res) =>{
-    res.render('resume',{
-        title:'resume',
-        page:'resume'
-    })
-}
-
-exports.contact = (req,res) =>{
-    res.render('contact',{
-        title:'contact',
-        
-    })
-}
